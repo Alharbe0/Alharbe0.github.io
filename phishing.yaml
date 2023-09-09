@@ -20,7 +20,7 @@ paths:
         '200':
           description: No response was specified
       tags:
-        - M0X0101_XSS_D
+        - Alharbe
       operationId: findAccounts
       summary: Finds all accounts
   '/hack/hachid/{id}':
