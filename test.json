@@ -3,7 +3,7 @@
     "urls": [
         {
             "url": "https://alharbe0.github.io/test.yaml",
-            "name": "Foo%3C%3E%3C%3E%22%27"
+            "name": "Foo<>\"'"
         }
     ]
 }
