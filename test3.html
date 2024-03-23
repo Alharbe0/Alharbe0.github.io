@@ -1,0 +1,20 @@
+<html>
+  <script>
+  var secret = "31337s3cr37t";
+  </script>
+
+  <iframe id="if1" src="https://alharbe0.github.io/child.html"></iframe>
+  <iframe id="if2" src="child.html"></iframe>
+  <iframe id="if3" srcdoc="<script>var secret='if3 secret!'; alert(parent.secret)</script>"></iframe>
+  <iframe id="if4" src="data:text/html;charset=utf-8,%3Cscript%3Evar%20secret='if4%20secret!';alert(parent.secret)%3C%2Fscript%3E"></iframe>
+
+  <script>
+  function access_children_vars(){
+    alert(if1.secret);
+    alert(if2.secret);
+    alert(if3.secret);
+    alert(if4.secret);
+  }
+  setTimeout(access_children_vars, 3000);
+  </script>
+</html>
