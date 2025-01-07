@@ -13,7 +13,8 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 
-<script type="text/javascript" defer="">
+
+    <script type="text/javascript" defer="">
 (function(appKey, opts) {
     window.uxc = {
         __t: [],
@@ -41,7 +42,16 @@ working. Further configuration is required.</p>
     script.id = 'uxcam-web-sdk';
     script.crossOrigin = 'anonymous';
     head.appendChild(script);
-})('xlsslx6i55j7bnl', {});
+})('xlsslx6i55j7bnl', {
+    appVersion: '1.0.0',
+    occlusion: {
+        queryParams: ['product', 'userId'],
+        url: function(url) {
+            // Custom URL occlusion logic
+            return url.replace(/\/invite\/\w+/, '/invite/:inviteId');
+        }
+    }
+});
 </script>
 <p>For online documentation and support please refer to
 <a href="http://nginx.org/">nginx.org</a>.<br/>
@@ -49,5 +59,6 @@ Commercial support is available at
 <a href="http://nginx.com/">nginx.com</a>.</p>
 
 <p><em>Thank you for using nginx.</em></p>
+    <div data-uxc="obfuscated">Sensitive Content</div>
 </body>
 </html>
